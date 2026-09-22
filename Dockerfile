@@ -3,4 +3,3 @@ WORKDIR /app
 COPY hello-world.py .
 EXPOSE 8080
 CMD ["python", "hello-world.py"]
-EOF
