@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: webapp
+  namespace: prod
+  labels:
+    app: webapp
+spec:
+  to:
+    kind: Service
+    name: webapp
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
